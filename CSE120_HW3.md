@@ -8,8 +8,22 @@
 # 3
 `a` 32 - 10 = 22 bits
 
-`b`
+`b` page address = 0xFC00, 0xFCC0 >> 10 = 0x3F (virtual value)
+
+`c` offset = 0xFFFF & 0x3FFF = 0x3FF
+
+`d` do 10 left shifts of 0x4 = 0x4 << 10 = 0x1000
+
+`e` physical address = 0x1000 & 0x3FF = 0x13FF
 # 4
+`a` 2^44 / 2^16 = 2^28 pages
+
+`b` 
+1. offset: log2(page size) = log2(2^16) = 16 bits
+2. index into 2nd page: log2(entries per page) = log2(2^14) = 14 bits
+3. index into root page: 44 - 16 - 14 = 14 bits
+
+`c` program pages + pages needed for each level = 2^16 + 3 pages
 # 5
 `Average Instruction Time` 2ns + 10ms/20000000 = 2.5ns
 
