@@ -1,4 +1,27 @@
 # 1 
+1. 8
+2. 4
+3. pageTable[0].vpn = 0
+   
+   pageTable[0].ppn = 2
+
+   pageTable[1].vpn = 1
+
+   pageTable[1].ppn = 0
+
+   pageTable[2].vpn = 2
+
+   pageTable[2].ppn = 6
+
+   pageTable[3].vpn = 3
+
+   pageTable[3].ppn = 4
+4. 256
+5. 768
+6. 6
+7. 42
+8. 810
+9. System.arraycopy assumes contiguous physical pages. With paging, the virtual pages may map to non-contiguous physical pages. In this case, it will not work. 
 # 2
 `a` 100ns + 100ns = 200ns
 
